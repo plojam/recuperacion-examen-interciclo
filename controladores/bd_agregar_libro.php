@@ -78,10 +78,12 @@
                     $aux2 = $aux2 +1;
 
                 }
-                //header("Location: ../vista/index.html");
+                header("Location: ../vista/index.html");
             }else{
-                //header("Location: ../vista/index.html");
+                header("Location: ../vista/agregarlibro.html");
             }
+        }else{
+            header("Location: ../vista/agregarlibro.html");
         }
 
 

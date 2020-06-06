@@ -64,7 +64,7 @@
                     
                             while($row3 = $resultado3->fetch_assoc()){
                                 echo "<td class=telefono>".$row3["aut_nombre"]."</td>";
-                                echo "<td>".$row3["aut_aut_nacionalidad"]."</td>";
+                                echo "<td>".$row3["aut_nacionalidad"]."</td>";
                             }
                         }
                         echo "</tr>";
