@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(232,241,232);
+}
+
+td, th{
+    width: 1%;
+    text-align: center;
+    border: solid black;
+}
+
+header, h2{
+    text-align: center;
+}
+
+#primer_div{
+    background-color: rgb(229, 243, 244);
+    border-bottom: solid black;
+}
+
+form{
+    margin-left: 35%;
+    width: 30%;
+    text-align: center;
+}
+
+input{
+    margin: 5px 10px;
+}
+
+th{
+    background-color: darkcyan;
+}
+
+aside{
+    border: solid black;
+    width: 50%;
+    margin-left: 24%;
+    margin-bottom: 20px;
+}
+
+.telefono{
+    width: 35%;
+    margin-left: 30%;
+}
+
