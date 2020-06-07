@@ -86,7 +86,7 @@
             header("Location: ../vista/agregarlibro.html");
         }
 
-
+        $conn->close();
  
     ?>
  </body>

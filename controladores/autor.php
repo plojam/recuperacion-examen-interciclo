@@ -15,6 +15,6 @@
             header("Location: ../vista/autor.html");
         }
     }
-
+    $conn->close();
     
 ?>

@@ -1,5 +1,5 @@
 <?php
-    include '../conexion/conexionBD.php';
+    //include '../conexion/conexionBD.php';
 
     $ncap = $_GET["ncap"];
     $cont = 0;
