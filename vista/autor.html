@@ -4,26 +4,25 @@
     <meta charset='utf-8'>
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="../css/agregarlibro.css">
-    <!--script src='main.js'></script-->
+    <script type='text/javascript' src='../javascript/autor.js'></script>
 </head>
 
 <body>
 
-    <form method="POST" action="../controladores/autor.php">
+    <form method="POST" onsubmit="return validacion(this)" action="../controladores/autor.php">
         <fieldset>
             <legend>Crear Autor</legend>
             <label>Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del autor" >
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del autor" onkeyup="return noNumeros(this), validarNA(this, 'mnombre', 0)" >
+            <span id="mnombre" class="error"></span>
             <label>Nacionalidad</label>
-            <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Ingrese la nacionalidad del autor" >
+            <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Ingrese la nacionalidad del autor" onkeyup="return noNumeros(this)" >
 
-            <input type="button" id="cancelar" name="cancelar" value="cancelar" onclick="location.href='index.html'">
             <input type="submit" id="agregar" name="agregar" value="agregar">
+            <input type="button" id="cancelar" name="cancelar" value="cancelar" onclick="location.href='index.html'">
         </fieldset>
 
     </form>
-
-
 
 
 </body>

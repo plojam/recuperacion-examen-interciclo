@@ -20,7 +20,7 @@
             <input type="text" id="capitulo" class="texto" name="capitulo" placeholder="ej. Capitulo1" value="">
             <input type="button" id="buscarcapitulo" name="buscarcapitulo" value="Buscar por capitulo" onclick="buscarPorCap()">
             <br>
-            <input type="button" id="cancelar" name="volver" value="Volver" onclick=<?php echo "location.href='../vista/index.php'" ?>>
+            <input type="button" id="cancelar" name="volver" value="Volver" onclick=<?php echo "location.href='../vista/index.html'" ?>>
             <div class="separador"></div>
         </fieldse>
         <div class="separador"></div>

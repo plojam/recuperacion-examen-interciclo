@@ -1,27 +1,27 @@
-var vgeneral = [false, false, false, false, false, false, false, false, false, false];
+var vgeneral = [false];
 
 function validacion(formulario){
     var bandera = true;
+    validarNA(document.getElementById('nombre'), 'mnombre',0);
     for(var i=0; i<10 ; i++){
         if(vgeneral[i]==false){
             bandera = false;
             i = 10;
         }
     }
-    if(bandera!==true){
-        validarCedula(0);
-        validarNA(document.getElementById('name'), 'mnombre',1);
-        validarNA(document.getElementById('lastname'), 'mapellido',2)
-        verificarDT(document.getElementById('address'), 'mdireccion',3);
-        verificarDT(document.getElementById('telf'), 'mtelefono',4);
-        validarOperadoraTipo('oper' , 'moper', 5)
-        validarOperadoraTipo('tipo', 'mtipo', 6)
-        validarFecha(7);
-        verificarCorreo(8);
-        verificarContrasena(9);
-    }
-
+    
     return bandera;
+}
+
+function error(inp, spa, men){
+    document.getElementById(spa).innerHTML = men;
+    inp.style.border = '2px red solid';
+    inp.className = 'error';
+}
+function arreglo(inp, spa){
+    document.getElementById(spa).innerHTML = '';
+    inp.style.border = '2px green solid';
+    inp.className = 'none';
 }
 
 function noNumeros(texto){

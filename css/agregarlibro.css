@@ -53,3 +53,17 @@ div{
 #id{
     visibility: hidden;
 }
+
+#ncap{
+    margin-left: 0px;
+}
+
+#lncap ,#ncap, #agcap{
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#ncap{
+    width: 30%;
+}

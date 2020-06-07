@@ -10,11 +10,11 @@
         echo "
                 <h1>Cap $cont</h1>
                 <label>Numero del capitulo</label>
-                <input type='text' id='num$cont' name='num$cont' value='$cont' />
+                <input type='text' id='num$cont' name='num$cont' value='$cont' onkeyup='return noLetras(this, 2)'/>
                 <label>Titulo del capitulo</label>
                 <input type='text' id='tit$cont' name='tit$cont' />
                 <label>Nombre del autor</label>
-                <input type='text' id='aut$cont' name='aut$cont'/>
+                <input type='text' id='aut$cont' name='aut$cont' onkeyup='return noNumeros(this)'/>
             ";
         $cont = $cont +1;
     }
