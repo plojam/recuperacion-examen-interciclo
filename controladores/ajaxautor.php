@@ -10,9 +10,9 @@
         while($row = $resultado->fetch_assoc()){
             echo "
             <label>Nombre del autor</label>
-            <input type='text' id='nom$cont' name='nom$cont' value='".$row['aut_nombre']."'/>
+            <input type='text' id='nom$cont' name='nom$cont' value='".$row['aut_nombre']."' disabled/>
             <label>Nacionalidad del autor</label>
-            <input type='text' id='nac$cont' name='nac$cont' value='".$row['aut_nacionalidad']."'/>
+            <input type='text' id='nac$cont' name='nac$cont' value='".$row['aut_nacionalidad']."' disabled/>
         ";
         }
     }else{
