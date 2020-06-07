@@ -29,7 +29,7 @@
         }
         while($aux<$cont){
             $autor = isset($_POST["aut$aux"]) ? mb_strtoupper(trim($_POST["aut$aux"]), 'UTF-8') : null;
-            $sql0 = "SELECT aut_id FROM autor WHERE aut_nombre='$autor'";
+            $sql0 = "SELECT aut_id FROM autor WHERE aut_id='$autor'";
             $result0 = $conn->query($sql0);
             $aux = $aux +1;
             if($result0->num_rows==0){
@@ -58,20 +58,20 @@
                 while($aux2<$cont){
                     
                     $autor = isset($_POST["aut$aux2"]) ? mb_strtoupper(trim($_POST["aut$aux2"]), 'UTF-8') : null;
-                    $sql3 = "SELECT aut_id FROM autor WHERE aut_nombre='$autor'";
+                    /*$sql3 = "SELECT aut_id FROM autor WHERE aut_nombre='$autor'";
                     $result3 = $conn->query($sql3);
-        
+                    
                     if($result3->num_rows>0){
                         while($row = $result3->fetch_assoc()) {
                             $idaut = $row["aut_id"];
                         }
-                    }
+                    }*/
                     
                     $capnum = isset($_POST["num$aux2"]) ? trim($_POST["num$aux2"]) : null;
                     $captit = isset($_POST["tit$aux2"]) ? mb_strtoupper(trim($_POST["tit$aux2"]), 'UTF-8') : null;
                     echo "<p>si</p>";
-                    echo "<p>$capnum  $captit  $idlib  $idaut $autor</p>";
-                    $sql4 = "INSERT INTO capitulo VALUES (0, $capnum, '$captit', $idlib, $idaut)";
+                    echo "<p>$capnum  $captit  $idlib  $autor $autor</p>";
+                    $sql4 = "INSERT INTO capitulo VALUES (0, $capnum, '$captit', $idlib, $autor)";
                     $conn->query($sql4);
                         
                     

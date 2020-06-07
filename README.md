@@ -41,6 +41,10 @@ Ademas, cuando se agregan capitulos, se usa AJAX para desplegar campos que permi
 
 ![img4](/imagenes/i4.png)
 
+Y como se ve, se debe ingresar el codigo de un autor, lo que permitira ver los datos del autor, esto se lo logro usando una vez mas AJAX, el resultado es el siguiente:
+
+![img4autores](/imagenes/i4autores.png)
+
 # Listar
 
 Para la pagina de listar libros se agregaron tablas que listan todos los libros ingresados en la base de datos, indicando los capitulos que tiene cada libro con su respectivo autor, la pagina queda de la siguinte forma:

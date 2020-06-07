@@ -20,9 +20,10 @@
         <label>Numero de paginas</label>
         <input type="text" id="npaginas" name="npaginas" onkeyup="return noLetras(this, 4)">
         <div class="separador"></div>
-        <label id="lncap">Numero capitulos:</label>
-        <input type="text" id="ncap" name="ncap">
-        <input type="button" id="agcap" name="agcap" value="Agregar cap" onclick="return capitulos()">
+        <label id="lncap" class="mlinea1">Numero capitulos:</label>
+        <input type="text" class="mlinea2" id="ncap" name="ncap" onkeyup="return noLetras(this, 3)">
+        <!--input type="text" id="ncap" name="ncap" class="mlinea1"/-->
+        <input type="button" id="agcap" name="agcap" class="mlinea1" value="Agregar cap" onclick="return capitulos()">
         <div class="separador"></div>
         <input type="submit" id="agregar" name="agregar" value="agregar">
         <input type="button" id="cancelar" name="cancelar" value="cancelar" onclick="location.href='index.html'">

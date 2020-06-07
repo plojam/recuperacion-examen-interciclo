@@ -24,6 +24,34 @@ function capitulos() {
     return false;
 }
 
+function autor(autorcod, divautor, cont) {
+    //console.log(autorcod.value);
+    var codautor = document.getElementById(autorcod).value;
+    if (codautor == "") {
+        document.getElementById(divautor).innerHTML = "";
+    } else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            //alert("llegue");
+            document.getElementById(divautor).innerHTML = this.responseText;
+        }
+    };
+    console.log(codautor);
+    xmlhttp.open("GET","../controladores/ajaxautor.php?autor="+codautor+"&cont="+cont,true);
+    xmlhttp.send();
+    }
+
+    return false;
+}
+
+
 
 function noLetras(texto, max){
     if(texto.value.length >0){
